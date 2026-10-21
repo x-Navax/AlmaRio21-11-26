@@ -74,8 +74,6 @@ function enviarWhatsApp() {
   const nombre = document.getElementById("nombre").value;
   const apellido = document.getElementById("apellido").value;
   const personas = document.getElementById("personas").value;
-  const alimentacion = document.getElementById("alimentacion").value;
-  const cancion = document.getElementById("cancion").value;
 
   const asistencia = document.querySelector('input[name="asistencia"]:checked');
 
@@ -88,9 +86,7 @@ function enviarWhatsApp() {
 
 Nombre: ${nombre} ${apellido}
 Asistencia: ${asistencia.value}
-Personas: ${personas || "No especificado"}
-Alimentación: ${alimentacion || "Ninguno"}
-Canción: ${cancion || "No indicó"}`;
+Personas: ${personas || "No especificado"}`;
 
   const numero = "5493487515127";
 
