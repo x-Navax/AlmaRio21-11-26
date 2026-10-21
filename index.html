@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Movimiento y colores de los íconos integrados: no dependen del CSS externo */
+        .anim-icon { display:flex; align-items:center; justify-content:center; }
+        .anim-icon svg { display:block; width:100%; height:100%; overflow:visible; filter:drop-shadow(0 3px 8px rgba(50,29,26,.24)); }
+        .calendar-face,.pin-shape,.gift-box { fill:rgba(80,48,43,.2); stroke:#fff5ed; stroke-width:3; }
+        .calendar-top,.gift-lid { fill:#b87968; stroke:#fff5ed; stroke-width:2.5; }
+        .calendar-rings,.calendar-grid,.hanger-line,.icon-sparkle,.gift-ribbon,.gift-bow { stroke:#e6c0b4; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+        .calendar-rings,.calendar-grid,.hanger-line,.icon-sparkle { fill:none; }
+        .calendar-date,.pin-center { fill:#e6c0b4; }
+        .calendar-date,.pin-center { transform-box:fill-box; transform-origin:center; animation:icon-pulse 1.8s ease-in-out infinite; }
+        .sparkle-one,.sparkle-two,.gift-sparkle,.star-one { transform-box:fill-box; transform-origin:center; animation:icon-sparkle 2s ease-in-out infinite; }
+        .pin-wave { fill:none; stroke:#b87968; stroke-width:2; transform-box:fill-box; transform-origin:center; animation:icon-wave 2.4s ease-out infinite; }
+        .wave-two { animation-delay:1.2s; }
+        .pin-shape { transform-box:fill-box; transform-origin:center; animation:icon-bob 2.8s ease-in-out infinite; }
+        .dress-star { fill:#e6c0b4; }
+        .star-two { animation:icon-twinkle 1.8s ease-in-out infinite; }
+        .gift-box { fill:rgba(146,91,78,.36); }
+        .gift-ribbon,.gift-bow { fill:#e6c0b4; }
+        .gift-lid { transform-box:fill-box; transform-origin:center; animation:icon-lid 2.8s ease-in-out infinite; }
+        .bow-left,.bow-right { transform-box:fill-box; transform-origin:center bottom; animation:icon-bow 2.8s ease-in-out infinite; }
+        .bow-right { animation-delay:.1s; }
+        @keyframes icon-pulse { 0%,100% { transform:scale(.88); opacity:.72; } 50% { transform:scale(1.14); opacity:1; } }
+        @keyframes icon-sparkle { 0%,100% { opacity:.55; transform:scale(.85) rotate(0); } 50% { opacity:1; transform:scale(1.12) rotate(12deg); } }
+        @keyframes icon-twinkle { 0%,100% { opacity:.35; } 50% { opacity:1; } }
+        @keyframes icon-wave { 0% { opacity:.65; transform:scale(.55); } 100% { opacity:0; transform:scale(1.15); } }
+        @keyframes icon-bob { 0%,100% { transform:translateY(1px); } 50% { transform:translateY(-4px); } }
+        @keyframes icon-lid { 0%,100% { transform:translateY(0) rotate(0); } 50% { transform:translateY(-3px) rotate(-2deg); } }
+        @keyframes icon-bow { 0%,100% { transform:rotate(0); } 50% { transform:rotate(-5deg); } }
+    </style>
+    <link rel="shortcut icon" href="./imagenes/invitacion-_1_.ico" type="image/x-icon">
+    <title>Mis XV Alma</title>
+</head>
+<body>
+        <section id="welcome" class="welcome-screen">
+    <div class="welcome-content">
+        <h1>MIS XV ALMA</h1>
+        <p>QUIERO QUE SEAS PARTE DE ESTA<br>NOCHE INOLVIDABLE</p>
+        <button id="btnIngresar">INGRESAR</button>
+    </div>
+    </section>
+    <header>    <div class="contenedor">
+
+        <img class="nombre" src="./imagenes/alma.png" alt="">
+    </div>
+    
+        <div class="contador-custom">
+                <div class="bloque">
+                    <span id="dias">00</span>
+                    <p>DÍAS</p>
+                </div>
+                <span class="separador">:</span>
+
+                <div class="bloque">
+                    <span id="horas">00</span>
+                    <p>HORAS</p>
+                </div>
+                <span class="separador">:</span>
+
+                <div class="bloque">
+                    <span id="minutos">00</span>
+                    <p>MINUTOS</p>
+                </div>
+                <span class="separador">:</span>
+
+                <div class="bloque">
+                    <span id="segundos">00</span>
+                    <p>SEGUNDOS</p>
+                </div>
+            </div>
+    </header>
+
+    <main>
+        <div class="frase-box">
+            <div class="linea"></div>
+            <p>PREPARATE PARA BAILAR, REIR Y FESTEJAR MIS XV A LO GRANDE</p>
+            <div class="linea"></div>
+        </div>
+
+        <div class="primeraimg">
+            <img src="./imagenes/00.jpg" alt="">
+        </div>
+
+
+
+
+        <div class="fecha-box">
+            <div class="anim-icon svgcalendario anim-calendar" style="width:100px;height:100px" aria-hidden="true">
+                <svg viewBox="0 0 100 100">
+                    <rect class="calendar-face" x="18" y="23" width="64" height="61" rx="8"/>
+                    <path class="calendar-top" d="M18 34a11 11 0 0 1 11-11h42a11 11 0 0 1 11 11v8H18z"/>
+                    <path class="calendar-rings" d="M34 17v13M66 17v13"/>
+                    <path class="calendar-grid" d="M30 53h8m12 0h8m12 0h2M30 66h8m12 0h8m12 0h2"/>
+                    <circle class="calendar-date" cx="66" cy="66" r="4.5"/>
+                    <path class="icon-sparkle sparkle-one" d="M82 48v10m-5-5h10"/>
+                </svg>
+            </div>
+
+                <h2>¿CUÁNDO?</h2>
+                <p>21 DE NOVIEMBRE 2026</p>
+                <span>| 21:00 HS |</span>
+            </div>
+
+            <div class="ubicacion-box">
+                            <div class="anim-icon ubi anim-location" style="width:300px;height:300px" aria-hidden="true">
+                <svg viewBox="0 0 100 100" style="width:118px;height:118px">
+                    <circle class="pin-wave wave-one" cx="50" cy="55" r="34"/>
+                    <circle class="pin-wave wave-two" cx="50" cy="55" r="34"/>
+                    <path class="pin-shape" d="M50 82s24-22 24-43a24 24 0 1 0-48 0c0 21 24 43 24 43Z"/>
+                    <circle class="pin-center" cx="50" cy="39" r="8"/>
+                    <path class="icon-sparkle sparkle-two" d="M78 25v10m-5-5h10"/>
+                </svg>
+            </div>
+
+                <h2>¿DÓNDE?</h2>
+                <p>RIO EVENTOS IDEALES</p>
+
+                <a href="https://www.google.com/maps/place/%22R%C3%ADo+Eventos+Ideales%22/@-34.108395,-59.0193701,17z/data=!3m1!4b1!4m6!3m5!1s0x95bb0b5722cfa2f5:0x251949a5fea45546!8m2!3d-34.108395!4d-59.0167952!16s%2Fg%2F11byp83r20?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D" class="btn-ubicacion " target="_blank">COMO LLEGAR</a>
+            </div>
+
+            <div class="carousel">
+                <div class="carousel-track">
+                    <img src="./imagenes/02.jpg" class="slide">
+                    <img src="./imagenes/03.jpg" class="slide">
+                    <img src="./imagenes/04.jpg" class="slide">
+                </div>
+
+                <button class="btn prev">‹</button>
+                <button class="btn next">›</button>
+                </div>
+        <br>
+
+        <div class="frase-box">
+            <div class="linea"></div>
+            <p>HAGAMOS QUE SEA UNA <br> NOCHE ¡INOLVIDABLE!</p>
+            <div class="linea"></div>
+        </div>
+
+         <div class="ubicacion-box">
+            <div class="anim-icon dress-icon" aria-hidden="true" style="width: 70px;height: 70px">
+                <svg viewBox="0 0 100 100">
+                    <path class="hanger-line" d="M48 27c0-5 3-8 8-8s8 3 8 7c0 5-5 7-8 10"/>
+                    <path class="hanger-line" d="M15 62 50 39l35 23H15Z"/>
+                    <path class="dress-star star-one" d="M76 28c1 5 3 7 8 8-5 1-7 3-8 8-1-5-3-7-8-8 5-1 7-3 8-8Z"/>
+                    <circle class="dress-star star-two" cx="26" cy="35" r="2.5"/>
+                </svg>
+            </div>
+
+                <h2>DRESS CODE</h2>
+                <p>ELEGANTE SPORT<br>
+                EVITAR COLOR ROSA</p>
+            </div>
+
+          <div class="regalos-box">
+            <div class="anim-icon regalosvg anim-gift" aria-hidden="true" style="width: 100px;height: 100px">
+                <svg viewBox="0 0 100 100">
+                    <path class="gift-box" d="M19 45h62v39H19z"/>
+                    <path class="gift-lid" d="M15 36h70v12H15z"/>
+                    <path class="gift-ribbon" d="M45 36h10v48H45z"/>
+                    <path class="gift-bow bow-left" d="M50 36c-18 0-24-5-22-12 2-7 16-5 22 12Z"/>
+                    <path class="gift-bow bow-right" d="M50 36c18 0 24-5 22-12-2-7-16-5-22 12Z"/>
+                    <path class="icon-sparkle gift-sparkle" d="M82 19v10m-5-5h10"/>
+                </svg>
+            </div>
+
+            <h2>REGALOS</h2>
+
+            <p>
+                NADA ES MÁS IMPORTANTE QUE TU PRESENCIA, PERO SI DESEAS HACERME
+                UN PRESENTE PUEDES DEPOSITARLO EN LA SIGUIENTE CUENTA
+            </p>
+            <p>ALIAS: Alma.lumb</p>
+
+            <button class="btn-alias" onclick="copiarAlias()">
+                COPIAR ALIAS
+            </button>
+
+            <span id="mensaje-copiado"></span>
+            </div>
+
+              <div class="carousel">
+                <div class="carousel-track">
+                    <img src="./imagenes/05..JPG" class="slide">
+                    <img src="./imagenes/01.jpg" class="slide">
+                </div>
+
+                <button class="btn prev">‹</button>
+                <button class="btn next">›</button>
+                </div>
+
+            <div class="form-box">
+                <h2 class="titulo-form">CONFIRMÁ TU ASISTENCIA</h2>
+<p class="subtitulo-form">ANTES DEL 11 DE NOVIEMBRE DEL 2026</p>
+
+        <input type="text" id="nombre" placeholder="Nombre *">
+        <input type="text" id="apellido" placeholder="Apellido *">
+
+        <label>
+            <input type="radio" name="asistencia" value="Confirmo"> Confirmo
+        </label>
+        <label>
+            <input type="radio" name="asistencia" value="No asiste"> No podré asistir
+        </label>
+
+        <input type="text" id="personas" placeholder="Cantidad de personas">
+        <input type="text" id="alimentacion" placeholder="Requerimiento alimenticio">
+        <input type="text" id="cancion" placeholder="Canción que no puede faltar">
+
+        <button onclick="enviarWhatsApp()">Confirmar</button>
+
+        </div>
+
+        <div class="fondo-box">
+            <br>
+        </div>
+
+        
+    </main>
+
+    <footer class="footer-brand">
+
+  <div class="brand">
+    <span>by</span>
+    <img class="pro" src="./imagenes/IMG_4019.PNG" alt=""> <!-- cambiá el nombre -->
+  </div>
+
+  <div class="redes">
+    <a href="https://www.instagram.com/prostage_eventos/?utm_source=ig_web_button_share_sheet" target="_blank">
+      <img src="./imagenes/instagram.png">
+    </a>
+    <a href="https://wa.me/5493487300352" target="_blank">
+      <img src="./imagenes/whatsapp.png">
+    </a>
+  </div>
+
+</footer>
+    
+    <script src="main.js"></script>
+
+
+
+
+</body>
+</html>
